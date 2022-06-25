@@ -20,20 +20,6 @@
       />
     </div>
     <VSpacer />
-    <div class="flex justify-end items-center gap-4">
-      <div
-        class="border-solid rounded-[14px] border-[#00C6ED] border-[2px] p-[15px]"
-      >
-        <span class="text-[white] text-[14px]">Floor Price:</span>
-        <span class="text-[white] text-[14px]">5 POLAR </span>
-      </div>
-      <div
-        class="border-solid rounded-[14px] border-[#00C6ED] border-[2px] p-[15px]"
-      >
-        <span class="text-[white] text-[14px]">Volume:</span>
-        <span class="text-[white] text-[14px]">100 POLAR</span>
-      </div>
-    </div>
   </div>
 </template>
 <script lang="ts">
