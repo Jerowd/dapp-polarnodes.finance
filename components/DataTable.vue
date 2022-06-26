@@ -96,14 +96,19 @@
         </div>
       </div>
       <div
-        v-if="title === `Pending Rewards` || title === `Daily Rewards` || title === `My $POLAR Balance`"
+        v-if="_title === `Pending Rewards` || _title === `Daily Rewards` || _title === `My $POLAR Balance`"
         class="flex justify-center text-[12px] text-[#00c6ed] mt-[5px]">
-        {{ (price !== null) ? (parseFloat(_price_in_dollar/1000000000000000000).toFixed(2)) + ' $' : '-' }}
+        {{ (_price !== null) ? (parseFloat(_price_in_dollar/1000000000000000000).toFixed(2)) + ' $' : '-' }}
+      </div>
+        <div
+        v-if="_title === `Total Nodes` && _boolDisplay===`true`"
+        class="flex justify-center text-[12px] text-[#00c6ed] mt-[5px]">
+         <br/>
       </div>
       <div
-        v-if="title === `My Nodes`"
+        v-if="_title === `My Nodes`"
         class="flex justify-center text-[12px] text-[#00c6ed] mt-[5px]">
-         --------------
+         <br/>
       </div>
     </v-card-text>
   </v-card>
@@ -132,7 +137,9 @@ import { BigNumber } from 'ethers';
     percentage: {
       type: Number,
     },
-
+    boolDisplay: {
+      type: String,
+    },
   },
 })
 export default class DataTable extends Vue {
@@ -162,6 +169,10 @@ export default class DataTable extends Vue {
 
   get _percentage () {
     return this.$props.percentage;
+  }
+
+  get _boolDisplay () {
+    return this.$props.boolDisplay;
   }
 }
 </script>

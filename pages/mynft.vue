@@ -1,14 +1,16 @@
 <template>
   <div class="flex flex-col md:mx-[197px] mx-[10%] mt-[30px] md:mt-[123px]">
     <span class="text-[24px] text-white">My NFTs 🗻</span>
-    <div class="md:flex flex-wrap gap-2 md:gap-[24px] mt-[32px]">
+    <div class="md:inline-flex flex-wrap gap-2 md:gap-[24px] mt-[32px]">
       <DataTable
         v-for="(item, i) in nodeStation"
         :key="i"
         :title="item.title"
         :icon="item.icon"
         :price="item.price"
+        :price_in_dollar="item.price_in_dollar"
         :percentage="item.percentage"
+        :boolDisplay="item.boolDisplay"
       />
     </div>
     <div class="md:mt-[40px]">
@@ -43,6 +45,7 @@ export default class Mynft extends WalletReactiveFetch implements IReactiveFetch
         icon: require('../assets/img/nodesIcon/totalnodes_icon.svg'),
         title: 'Pending Rewards',
         price: this.isWalletConnected ? this.$store.getters['nodes/totalPendingRewards'] : null,
+        price_in_dollar: (this.isWalletConnected ? this.$store.getters['nodes/totalPendingRewards'] : null) * this.$store.state.coingecko.price,
         percentage: null,
       },
       {
@@ -50,12 +53,15 @@ export default class Mynft extends WalletReactiveFetch implements IReactiveFetch
         title: 'My Nodes',
         price: this.isWalletConnected ? this.$store.getters['nodes/myTotalCreated'] : null,
         percentage: null,
+        boolDisplay: null,
       },
       {
         icon: require('../assets/img/nodesIcon/polarbalance_icon.svg'),
         title: 'My $POLAR Balance',
-        price: this.isWalletConnected ? this.$store.getters['tokens/balanceForToken'](addresses.Token) :null,
-        percentage: null
+        price: this.isWalletConnected ? this.$store.getters['tokens/balanceForToken'](addresses.Token) : null,
+        price_in_dollar: (this.isWalletConnected ? this.$store.getters['tokens/balanceForToken'](addresses.Token) : null) * this.$store.state.coingecko.price,
+        percentage: null,
+        boolDisplay: null,
       },
     ];
   }

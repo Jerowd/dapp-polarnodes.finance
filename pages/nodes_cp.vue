@@ -70,6 +70,7 @@ export default class Nodes extends WalletReactiveFetch implements IReactiveFetch
         title: 'Total Nodes',
         price: this.$store.getters['nodes/totalCreated'],
         percentage: null,
+        boolDisplay: 'true',
       },
       {
         icon: require('../assets/img/nodesIcon/mynodes_icon.svg'),
