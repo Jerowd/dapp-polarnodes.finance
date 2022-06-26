@@ -7,27 +7,28 @@ $font-family : 'WorkSans';
 html {
     scrollbar-width: none;
     // -ms-overflow-style: none;
-  }
-  
+}
+
 html::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
 
-body {     
+body {
     // overflow: none;
     filter: drop-shadow(0 0 10px white);
     // color: white !important;
 
 }
 
-.v-main__wrap{
+.v-main__wrap {
     background-color: #010101;
     height: calc(100vh - 56px);
     overflow-y: auto;
     padding-bottom: 24px;
-    @media (min-width: 768px){
-        border-radius: 16px!important;
+
+    @media (min-width: 768px) {
+        border-radius: 16px !important;
     }
 }
 
@@ -36,14 +37,16 @@ body {
 }
 
 .v-application {
-    [class*='text-'] {      
-      font-family: $font-family, sans-serif !important;
+    [class*='text-'] {
+        font-family: $font-family, sans-serif !important;
     }
-    font-family: $font-family, sans-serif !important;
+
+    font-family: $font-family,
+    sans-serif !important;
 }
 
 .flex1 {
-    flex:1 !important;
+    flex: 1 !important;
 }
 
 .v-navigation-drawer__content {
@@ -56,12 +59,12 @@ body {
     color: white !important
 }
 
-.v-input__slot:before{
-    border-color: none !important    
+.v-input__slot:before {
+    border-color: none !important
 }
 
-.v-input__slot:after{
-    border-color: none !important    
+.v-input__slot:after {
+    border-color: none !important
 }
 
 .v-list-item {
@@ -71,14 +74,18 @@ body {
 ::placeholder {
     color: white !important
 }
-.v-input--selection-controls .v-input__slot > .v-label, .v-input--selection-controls .v-radio > .v-label {
-    color : #ffffff !important;
+
+.v-input--selection-controls .v-input__slot>.v-label,
+.v-input--selection-controls .v-radio>.v-label {
+    color: #ffffff !important;
     font-size: 12px;
 }
-.v-input--selection-controls__input .v-icon{
-    color: #00C6ED!important;
+
+.v-input--selection-controls__input .v-icon {
+    color: #00C6ED !important;
 }
-.mdi-menu-down::before{
+
+.mdi-menu-down::before {
     color: #00C6ED !important
 }
 
@@ -86,22 +93,24 @@ body {
     color: #00C6ED !important
 }
 
-.walletconnect-modal__mobile__toggle a{
+.walletconnect-modal__mobile__toggle a {
     color: black;
 }
+
 .v-input--selection-controls {
     margin-top: 0px !important;
 }
 
-@media (min-width: 768px){
-    .v-main__wrap{
-        border-radius: 16px!important;
+@media (min-width: 768px) {
+    .v-main__wrap {
+        border-radius: 16px !important;
     }
 }
-@media (max-width: 768px){
-    .v-dialog__content{
+
+@media (max-width: 768px) {
+    .v-dialog__content {
         align-items: baseline !important;
         margin-top: 150px;
-        height: unset!important;
+        height: unset !important;
     }
 }
