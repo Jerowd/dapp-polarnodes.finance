@@ -1,8 +1,8 @@
 <template>
-  <div class="overflow-x-auto w-full">
+  <div class="overflow-x-auto w-auto mb-[32px]">
     <div class="flex flex-col">
-      <div class="flex justify-between bg-[#00C6ED]  rounded-t-lg p-[16px] md:min-w-[420px]">
-        <div class="text-white text-[16px]">
+      <div class="flex-col justify-between bg-[#00C6ED]  rounded-t-lg p-[16px] md:min-w-[420px] mb-[10px]">
+        <div class="text-white text-[16px] mb-[10px]">
           My Mountain NFTs
         </div>
         <v-btn

@@ -7,7 +7,6 @@
       rounded-[12px]
       border-none
       h-[100%]
-      min-width-[2000px]
       mb-[30px]
       md:mb-[0px]
       display inline-block
