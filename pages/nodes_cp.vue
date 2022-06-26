@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col md:mx-[197px] mx-[10%] mt-[30px] md:mt-4">
     <span class="text-[24px] text-white">Node Station 🚉️</span>
-    <div class="md:inline-flex flex-wrap gap-2 md:gap-[24px] mt-[32px]">
+    <div class="md:flex flex-wrap gap-2 md:gap-[24px] mt-[32px]">
       <DataTable
         v-for="(item, i) in nodeStation"
         :key="i"

@@ -106,47 +106,31 @@ export default class NodeNft extends Vue {
 <style scoped>
 .node-image {
   width: 100%;
-  height: 127px;
+  height: 70%;
   object-fit: cover;
 }
 
 .divider {
   height: 1px;
-  flex-grow: 0;
+  flex-grow: 1;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .node-nft:hover {
-  box-shadow: 0 0 14px 14px rgba(0, 198, 237, 0.5);
+  box-shadow: 0 0 2px 2px rgba(0, 198, 237, 0.5);
 }
 .node-nft-Olympus:hover {
-  box-shadow: 0 0 14px 14px orange;
+  box-shadow: 0 0 2px 2px orange;
 }
 
-@media screen and (min-width: 1024px) {
-  .node-nft {
-    flex-grow: 0;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .node-nft {
-    flex-grow: 1;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .node-nft {
-    margin-bottom: 8px;
-  }
-}
 
 .node-nft {
   min-width: 160px;
+  max-width: 100%;
   cursor: pointer;
   text-align: center;
   font-size: 12px;
-  height: 253px;
+  height: 400px;
   padding: 12px 0;
   border-radius: 14px;
   border: solid 1px #00c6ed;
@@ -158,13 +142,15 @@ export default class NodeNft extends Vue {
   line-height: normal;
   letter-spacing: normal;
   color: #fff;
+  margin-bottom:10px;
 }
 .node-nft-Olympus {
   min-width: 160px;
+  max-width: 100%;
   cursor: pointer;
   text-align: center;
   font-size: 12px;
-  height: 253px;
+  height: 400px;
   padding: 12px 0;
   border-radius: 14px;
   border: solid 1px orange;

@@ -2,17 +2,17 @@
   <v-card
     class="
       flex flex-col
-      flex1
       bg-[#17171B]
       rounded-[12px]
       border-none
-      h-[116px]
+      h-[100px]
       mb-[30px]
       md:mb-[0px]
     "
+    
   >
-    <v-card-title class="text-[14px] text-[#8a8c8f]">
-      <div class="flex">
+    <v-card-title class="justify-center text-[14px] text-[#8a8c8f]">
+      <div class="flex justify-center text-[14px] ">
         <img class="mr-[5px]" :src="_icon" alt="">
         <span class="text-[14px] text-[#FFFFFF]">{{ _title }}</span>
       </div>
@@ -68,7 +68,7 @@
 
       <div
         v-if="_title === `My $POLAR Balance`"
-        class="flex text-[24px] text-[#FFFFFF] mr-[16px]"
+        class="flex justify-center text-[24px] text-[#FFFFFF] mr-[16px]"
       >
         <div class="text-[24px] text-[#FFFFFF] mr-[16px]">
           {{ (_price !== null) ? parseFloat(_price).toFixed(2) + ' $POLAR' : '-' }}

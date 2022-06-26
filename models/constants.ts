@@ -44,12 +44,12 @@ export const NODENAME_TO_VIDEO = {
 };
 
 export const LUCKYBOX_INDEX_TO_IMAGE = [
-  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 1.jpg'),
   require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 2.jpg'),
-  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 3.jpg'),
-  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 4.jpg'),
-  require('../assets/PACK/Lucky Boxes/olympuslucky.jpg'),
-  require('../assets/PACK/Lucky Boxes/LUCKY BOX DEGEN FIX.jpg')
+  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 2.jpg'),
+  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 2.jpg'),
+  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 2.jpg'),
+  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 2.jpg'),
+  require('../assets/PACK/Lucky Boxes/LUCKY BOX LVL 2.jpg'),
 ];
 
 export const LUCKYBOX_INDEX_TO_VIDEO = [
@@ -67,5 +67,5 @@ export const LUCKYBOX_VIDEO_BY_TYPE: Record<string, string> = {
   'Icy Lucky Box': require('../assets/PACK/Reveal/LUCKY BOX OPENING LVL 3.mp4'),
   'Placeholder Lucky Box': require('../assets/PACK/Reveal/LUCKY BOX OPENING LVL 4.mp4'),
   'Olympus Lucky Box': require('../assets/PACK/Reveal/LUCKY BOX OLYMPUS OPENING.mp4'),
-  "Degen Lucky Box": require('../assets/PACK/Lucky Boxes/LUCKY BOX DEGEN OPENING.mp4')
+  'Degen Lucky Box': require('../assets/PACK/Lucky Boxes/LUCKY BOX DEGEN OPENING.mp4')
 };

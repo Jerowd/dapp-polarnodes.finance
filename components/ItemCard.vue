@@ -188,7 +188,7 @@ export default class ItemCard
 }
 
 .nftCard:hover {
-  box-shadow: 0 0 14px 14px rgba(0, 198, 237, 0.5);
+  box-shadow: 0 0 2px 2px rgba(0, 198, 237, 0.5);
 }
 .nftCard {
   width: 200px;
