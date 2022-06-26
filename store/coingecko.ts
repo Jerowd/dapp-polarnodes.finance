@@ -5,7 +5,7 @@ export const state = () => ({
   price: null as (number | null),
   percentage24h: null as (number | null),
   marketCap: null as (number | null),
-  totalSupply: 2125000 as (number | null),
+  totalSupply: 3600000 as (number | null),
 });
 
 type State = ReturnType<typeof state>;
@@ -34,25 +34,15 @@ export const mutations: MutationTree<State> = {
 
 export const actions: ActionTree<State, {}> = {
   async loadCoinData ({ commit }) {
-    const params = {
-      contract_addresses: '0x6c1c0319d8ddcb0ffe1a68c5b3829fd361587db4',
-      vs_currencies: 'usd',
-      include_market_cap: true,
-      include_24hr_vol: true,
-      include_24hr_change: true,
-      include_last_updated_at: true,
-    };
-
     await axios
       .get(
-        'https://api.coingecko.com/api/v3/simple/token_price/avalanche', { params, headers: { 'Access-Control-Allow-Origin': '*' } }
+        'https://api.dexscreener.com/latest/dex/tokens/0x6C1c0319d8dDcb0ffE1a68C5b3829Fd361587DB4', { headers: { 'Access-Control-Allow-Origin': '*' } }
       )
       .then((response: any) => {
         const keyArray = Object.keys(response.data);
-
-        commit('setPrice', response.data[keyArray[0]].usd);
-        commit('setPercentage24h', response.data[keyArray[0]].usd_24h_change);
-        commit('setMarketCap', response.data[keyArray[0]].usd * 1000000);
+        commit('setPrice', Number(response.data[keyArray[1]][0].priceUsd));
+        commit('setPercentage24h', response.data[keyArray[1]][0]['priceChange'].h24);
+        commit('setMarketCap', response.data[keyArray[1]][0]['fdv']);
       });
   },
 };
