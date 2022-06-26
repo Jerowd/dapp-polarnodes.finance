@@ -102,7 +102,7 @@ export default class LeftSideBar extends Vue {
       to: '/mynft',
     },
     {
-      url: require('../assets/img/ticket.svg'),
+      url: require('../assets/img/ticket.png'),
       title: 'Lottery',
       to: '/lottery',
     },
