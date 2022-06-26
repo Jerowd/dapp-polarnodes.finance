@@ -19,7 +19,6 @@
         hide-details
       />
     </div>
-    <VSpacer />
   </div>
 </template>
 <script lang="ts">
