@@ -30,10 +30,11 @@
       class="md:flex flex-wrap gap-2 md:gap-[12px] my-[32px]"
       style="color: white"
     >
-      <NodeNftLoading v-for="index of 5" :key="`loading-node-${index}`" />
+      <NodeNftLoading v-for="index of 5" :key="`loading-node-${index}`" />  
     </div>
     <span ref="lucky-box" class="mt-[64px] text-[24px] text-white">Node Lucky Boxes 📦️</span>
     <div
+      v-if="this.isWalletConnected"
       class="md:flex flex-wrap gap-2 md:gap-[24px] my-[32px]"
       style="color: white"
     >
@@ -44,6 +45,13 @@
         :name="name"
         :cost="price"
       />
+    </div>
+    <div
+      v-else="this.isWalletConnected"
+      class="md:flex flex-wrap gap-2 md:gap-[24px] my-[32px]"
+      style="color: white"
+    >
+     <NodeNftLoading v-for="index of 8" :key="`loading-node-${index}`" />  
     </div>
   </div>
 </template>
