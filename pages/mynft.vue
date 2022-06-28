@@ -20,8 +20,7 @@
       </div>
     </div>
     <div 
-    width="800px"
-    class="min md:mt-[40px]">
+    class="min md:mt-[15px] w-[auto]">
       <MigrationTable />
     </div>
   </div>

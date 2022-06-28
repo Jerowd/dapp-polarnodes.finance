@@ -1,12 +1,12 @@
 <template>
-  <div class="display-center w-[70%] mb-[32px] md:min-w-[420px] ml-auto mr-auto">
+  <div class="display-center lg:w-[50%] md:w-[70%] sm:w-[100%] mb-[32px] md:min-w-[420px] ml-auto mr-auto">
     <div class="flex flex-col">
-      <div class="flex-col justify-between bg-[#00C6ED]  rounded-t-lg p-[16px] md:min-w-[420px]">
+      <div class="flex-col justify-between bg-[#00C6ED]  rounded-t-lg p-[16px] md:min-w-[430px]">
         <div class="text-white text-[16px] mb-[10px] w-[150px]">
           My Mountain NFTs
         </div>
         <v-btn
-          class="tex text-white font-normal text-[16px] border-solid border-[white] border-[2px] hover:bg-[#00C6ED] rounded-[14px] px-[20px]"
+          class="tex text-white font-normal text-[16px] border-solid border-[white] border-[2px] hover:bg-[#00C6ED] rounded-[14px] px-[20px] w-[95%]"
           dark
           text
           :loading="isClaimAllBtnLoading"
