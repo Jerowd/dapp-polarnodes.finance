@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col md:mx-[197px] mx-[10%] mt-[30px] md:mt-[123px]">
     <span class="text-[24px] text-white">My NFTs 🗻</span>
-    <div class="md:inline-flex flex-wrap gap-2 md:gap-[24px] mt-[32px]">
+    <div class="md:inline-flex flex-wrap gap-2 md:gap-[24px] mt-[32px] w-auto">
       <DataTable
         v-for="(item, i) in nodeStation"
         :key="i"
@@ -13,13 +13,15 @@
         :boolDisplay="item.boolDisplay"
       />
     </div>
-    <div class="md:mt-[40px]">
+    <div class=" md:mt-[40px]">
       <MyLuckyBoxesTable :items="luckyBoxes" @scroll-to-table="onScrollToTable" />
       <div ref="table">
         <NodeTable :items="nfts" />
       </div>
     </div>
-    <div class="md:mt-[40px]">
+    <div 
+    width="800px"
+    class="min md:mt-[40px]">
       <MigrationTable />
     </div>
   </div>

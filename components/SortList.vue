@@ -7,7 +7,7 @@
         label="Filter by NFT Type"
         multiple
         dark
-        class="my-0 border-solid border-[#00C6ED] border-[2px] rounded-[14px] px-[10px] md:w-[60%]"
+        class="bg-[#00C6ED] my-0 border-solid border-[#00C6ED] border-[2px] rounded-[14px] px-[10px] md:w-[60%] mr-[15px]"
         hide-details
       />
       <v-select
@@ -15,7 +15,7 @@
         :items="views"
         label="Selected view"
         dark
-        class="my-0 border-solid border-[#00C6ED] border-[2px] rounded-[14px] px-[10px] md:w-[40%]"
+        class="bg-[#00C6ED] my-0 border-solid border-[#00C6ED] border-[2px] rounded-[14px] px-[10px] md:w-[40%]"
         hide-details
       />
     </div>

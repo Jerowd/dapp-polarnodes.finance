@@ -10,6 +10,7 @@
       mb-[30px]
       md:mb-[0px]
       display inline-block
+      md:min-w-[420px]
     "
   >
     <v-card-title class="justify-center text-[14px] text-[#8a8c8f]">
